@@ -81,7 +81,6 @@
                 </li>
             </ul>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-
                 <li class="nav-item">
                     <a class="btn btn-outline-primary" href="https://www.creative-tim.com/builder/argon" target="_blank">
                         <span class="nav-link-inner--text">Buy Stocks</span>
@@ -95,15 +94,17 @@
                         <span class="nav-link-inner--text">Manage Portfolio</span>
                     </a>
                 </li>
-
+                <li class="nav-item">
+                    <div class="form-group search-form-group">
+                        <div class="input-group input-group-alternative">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
+                            </div>
+                            <input class="form-control search-tf" placeholder="Search stocks..." type="text">
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
-        <div class="d-flex justify-content-end mb-3">
-            <form action="/form/submit" method="GET">
-                <input type="text" name="text" class="search" placeholder="Search Stocks...">
-                <input type="submit" name="submit" class="submit" value="Search">
-            </form>
-        </div>
-
     </div>
 </nav>

@@ -33,3 +33,9 @@ table.stock {
     align-content: center;
     text-align: center;
 }
+.search-form-group {
+    margin-bottom: 0px;
+}
+.search-tf {
+    background-color: #dddddd;
+}
