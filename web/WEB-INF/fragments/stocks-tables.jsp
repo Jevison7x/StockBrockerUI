@@ -7,9 +7,9 @@
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
 
 
-<div class="row row-grid align-items-center my-md">
-                        <table class="stock">
-                            <h1 class="">HOT STOCKS</h1>
+<div style="padding-left: 30px; padding-right: 30px">
+    <table class="stock" id="stockTable">
+                            <h1 class="align-content">HOT STOCKS</h1>
                             <tr>
                                 <th>Company Name</th>
                                 <th>Symbol</th>

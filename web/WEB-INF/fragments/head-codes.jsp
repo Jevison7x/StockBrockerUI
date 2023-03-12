@@ -24,3 +24,5 @@
         <link href="./assets/css/argon-design-system.css?v=1.2.2" rel="stylesheet" />
         <!-- Custom CSS Files -->
         <link href="./css/kufre.css" rel="stylesheet"/>
+         <!-- Data tables CSS Files -->
+        <link href="./css/jquery.dataTables.min.js" rel="stylesheet" />

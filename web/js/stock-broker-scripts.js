@@ -8,28 +8,6 @@
  * Please contact Xyneex Technologies, #1 Orok Orok Street, Calabar, Nigeria.
  * or visit www.xyneex.com if you need additional information or have any
  * questions.
-*/
-/*
-    Created on : Mar 12, 2023, 9:07:06 AM
-    Author     : KUFRE
-*/
+ */
+let table = new DataTable('#myTable');
 
-table.stock {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.stock td, .stock th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-.stock tr:nth-child(even) {
-    background-color: #dddddd;
-}
-.align-content{
-    align-content: center;
-    text-align: center;
-}
