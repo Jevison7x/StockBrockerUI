@@ -22,3 +22,5 @@
         <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
         <!-- CSS Files -->
         <link href="./assets/css/argon-design-system.css?v=1.2.2" rel="stylesheet" />
+        <!-- Custom CSS Files -->
+        <link href="./css/kufre.css" rel="stylesheet"/>

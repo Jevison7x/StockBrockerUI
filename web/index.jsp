@@ -18,6 +18,7 @@
         <!-- End Navbar -->
         <div class="wrapper">
             <jsp:include page="WEB-INF/fragments/banner-hero.jsp"/>
+            <jsp:include page="WEB-INF/fragments/stocks-tables.jsp"/>
             <jsp:include page="WEB-INF/fragments/footer.jsp"/>
         </div>
         <!--   Core JS Files   -->
