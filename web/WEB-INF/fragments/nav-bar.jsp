@@ -73,8 +73,8 @@
                         <span class="nav-link-inner--text">Account</span>
                     </a>
                     <div class="dropdown-menu">
-                        <a href="./examples/register.html" class="dropdown-item">Register</a>
-                        <a href="./examples/register.html" class="dropdown-item">Login</a>
+                        <a href="register.jsp" class="dropdown-item">Register</a>
+                        <a href="login.jsp" class="dropdown-item">Login</a>
                         <a href="./examples/login.html" class="dropdown-item">Profile</a>
                         <a href="./examples/register.html" class="dropdown-item">Settings</a>
                     </div>
