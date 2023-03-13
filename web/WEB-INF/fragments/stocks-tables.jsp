@@ -24,7 +24,7 @@
                                 <td>231</td>
                                 <td>21,900,216.4</td>
                                 <td>&#36;</td>
-                                <td><button type="button" class="btn btn-sm btn-success" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Buy Now</button></td>
+                                <td><button type="button" class="btn btn-sm btn-success" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Buy Now</button><button type="button" class="btn btn-sm btn-warning" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Sell Now</button></td>
                             </tr>
                             <tr>
                                 <td>Flutterwave</td>
@@ -32,7 +32,7 @@
                                 <td>43.1</td>
                                 <td>1,222,43</td>
                                 <td>&#8358;</td>
-                                <td><button type="button" class="btn btn-sm btn-success" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Buy Now</button></td>
+                                <td><button type="button" class="btn btn-sm btn-success" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Buy Now</button><button type="button" class="btn btn-sm btn-warning" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Sell Now</button></td>
                             </tr>
                             <tr>
                                 <td>Apple</td>
@@ -40,7 +40,7 @@
                                 <td>231</td>
                                 <td>21,900,216.4</td>
                                 <td>fa fa-dollar</td>
-                                <td><button type="button" class="btn btn-sm btn-success" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Buy Now</button></td>
+                                <td><button type="button" class="btn btn-sm btn-success" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Buy Now</button><button type="button" class="btn btn-sm btn-warning" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Sell Now</button></td>
                             </tr>
                             <tr>
                                 <td>Apple</td>
@@ -48,7 +48,7 @@
                                 <td>231</td>
                                 <td>21,900,216.4</td>
                                 <td>fa fa-dollar</td>
-                                <td><button type="button" class="btn btn-sm btn-success" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Buy Now</button></td>
+                                <td><button type="button" class="btn btn-sm btn-success" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Buy Now</button><button type="button" class="btn btn-sm btn-warning" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Sell Now</button></td>
                             </tr>
                             <tr>
                                 <td>Apple</td>
@@ -56,7 +56,7 @@
                                 <td>231</td>
                                 <td>21,900,216.4</td>
                                 <td>fa fa-dollar</td>
-                                <td><button type="button" class="btn btn-sm btn-success" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Buy Now</button></td>
+                                <td><button type="button" class="btn btn-sm btn-success" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Buy Now</button><button type="button" class="btn btn-sm btn-warning" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Sell Now</button></td>
                             </tr>
                             <tr>
                                <td>Apple</td>
@@ -64,7 +64,7 @@
                                 <td>231</td>
                                 <td>21,900,216.4</td>
                                 <td>fa fa-dollar</td>
-                                <td><button type="button" class="btn btn-sm btn-success" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Buy Now</button></td>
+                                <td><button type="button" class="btn btn-sm btn-success" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Buy Now</button><button type="button" class="btn btn-sm btn-warning" data-container="body" data-original-title="Popover on Top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Sell Now</button></td>
                             </tr>
 
                         </table>

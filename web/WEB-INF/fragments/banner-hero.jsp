@@ -4,7 +4,7 @@
     Author     : jevis
 --%>
 
-<div class="section section-hero section-shaped">
-    <img src="./images/banner.png" style="object-fit: fill" class="img-fluid">
+<div>
+    <img src="./images/banner1.png" style="object-fit: fill" class="img-fluid">
 </div>
 
