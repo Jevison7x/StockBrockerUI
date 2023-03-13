@@ -24,5 +24,5 @@
         <!--   Core JS Files   -->
         <jsp:include page="WEB-INF/fragments/scripts.jsp"/>
         <jsp:include page="WEB-INF/fragments/buy-modal.jsp"/>
-    </body> 
+    </body>
 </html>
