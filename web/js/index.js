@@ -4,14 +4,7 @@ $(document).ready(function(){
         $('#no-user-menu').remove();
     }
 
-    $.ajax({
-        url: "/company-service/fetch-companies",
-        dataType: 'JSON',
-        success: function(data, textStatus, jqXHR){
-            console.log(data);
-            LoadCurrentReport(data);
-        }
-    });
+    let table = new DataTable('#stockTable');
 
     $('#login-form').submit(function(e){
         e.preventDefault();
@@ -91,22 +84,3 @@ $(document).ready(function(){
         });
     });
 });
-
-
-function LoadCurrentReport(companyStocks){
-    //Load  datatable
-    var oTblReport = $("#stockTable");
-
-    oTblReport.DataTable({
-        "data": companyStocks.companies,
-        "columns": [
-            {"data": "name"},
-            {"data": "symbol"},
-            {"data": "sharePrice"},
-            {"data": "currencyName"},
-            {"data": "currency"},
-            {"data": "numberOfShares"},
-            {"data": '<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#buy-stocks-modal">Buy Now</button><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#buy-stocks-modal">Sell Now</button>'}
-        ]
-    });
-}
