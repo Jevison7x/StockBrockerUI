@@ -72,10 +72,9 @@
                         <i class="ni ni-collection d-lg-none"></i>
                         <span class="nav-link-inner--text">Account</span>
                     </a>
-                    <div class="dropdown-menu">
-                        <a href="register.jsp" class="dropdown-item">Register</a>
-                        <a href="login.jsp" class="dropdown-item">Login</a>
-                        
+                    <div id="no-user-menu" class="dropdown-menu">
+                        <a href="register" class="dropdown-item">Register</a>
+                        <a href="login" class="dropdown-item">Login</a>
                     </div>
                 </li>
             </ul>

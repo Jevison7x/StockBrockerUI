@@ -29,7 +29,7 @@
                     <span></span>
                     <span></span>
                 </div>
-                <div class="container pt-lg-7">
+                <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-5">
                             <div class="card bg-secondary shadow border-0">
@@ -37,35 +37,33 @@
                                     <div class="text-center text-muted mb-4">
                                         <h2 style="font-size: 20px"> Create your Account</h2>
                                     </div>
-                                    <form role="form" id="create-account-form">
+                                    <form method="post" action="" id="create-account-form">
                                         <div class="form-group">
                                             <div class="input-group input-group-alternative mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                                                 </div>
-                                                <input class="form-control" placeholder="First Name" type="text" id="first-name">
+                                                <input class="form-control" placeholder="First Name" type="text" id="first-name" required>
                                             </div>
                                             <div class="input-group input-group-alternative mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                                                 </div>
-                                                <input class="form-control" placeholder="Last Name" type="text" id="last-name">
+                                                <input class="form-control" placeholder="Last Name" type="text" id="last-name" required>
                                             </div>
                                             <div class="input-group input-group-alternative mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                                                 </div>
-                                                <input class="form-control" placeholder="Username" type="text" id="userName">
+                                                <input class="form-control" placeholder="Username" type="text" id="userName" required>
                                             </div><!-- comment -->
-
-
                                         </div>
                                         <div class="form-group">
                                             <div class="input-group input-group-alternative mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                                 </div>
-                                                <input class="form-control" placeholder="Email" type="email" id="email">
+                                                <input class="form-control" placeholder="Email" type="email" id="email" required>
                                             </div>
                                         </div>
                                         <div class="form-group focused">
@@ -73,23 +71,22 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                                 </div>
-                                                <input class="form-control" placeholder="Password" type="password" id="password">
+                                                <input class="form-control" placeholder="Password" type="password" id="password" required>
                                             </div>
                                         </div>
                                         <div class="input-group input-group-alternative mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
-                                                </div>
-                                                <input class="form-control" placeholder="Confirm Password" type="password" id="confirm-password">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                                             </div>
-
+                                            <input class="form-control" placeholder="Confirm Password" type="password" id="confirm-password" required>
+                                        </div>
                                         <div class="row my-4">
                                             <div class="col-12">
-                                               
+
                                             </div>
                                         </div>
                                         <div class="text-center">
-                                            <button id="create-account"  type="submit" class="btn btn-primary mt-4">Create account</button>
+                                            <button id="create-account" type="submit" class="btn btn-primary mt-4">Create account</button>
                                         </div>
                                     </form>
                                 </div>

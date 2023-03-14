@@ -12,6 +12,19 @@
 
 
 $(document).ready(function(){
+    if(localStorage.getItem("user") !== null){
+        $('#no-user-menu').remove();
+    }
+
+    $.ajax({
+        url: "/company-service/fetch-companies",
+        dataType: 'JSON',
+        success: function(data, textStatus, jqXHR){
+            console.log(data);
+            LoadCurrentReport(data);
+        }
+    });
+
     $('#login-form').submit(function(e){
         e.preventDefault();
         var userNameOrEmail = $('#username').val().trim();
@@ -27,15 +40,28 @@ $(document).ready(function(){
             },
             success: function(data)
             {
-                if(data === 'success'){
-                    window.location.replace('');
+                if(data.status === 'success'){
+                    localStorage.setItem("user", data.user);
+                    localStorage.setItem("token", data.userToken);
+                    window.location.href = '/';
                 }else{
-                    alert(data);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: data.message
+                    });
                 }
+            },
+            error: function(){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'There was an error, please reload this page'
+                });
             }
         });
-
     });
+
     $('#create-account-form').submit(function(e){
         e.preventDefault();
         var userName = $('#userName').val().trim();
@@ -44,9 +70,6 @@ $(document).ready(function(){
         var firstName = $('#first-name').val().trim();
         var lastName = $('#last-name').val().trim();
         var email = $('#email').val().trim();
-
-
-
         $.ajax({
             type: "POST",
             url: '/user-service/create-new-user',
@@ -60,32 +83,42 @@ $(document).ready(function(){
             },
             success: function(data)
             {
-                if(data.message === 'success'){
-                    window.location.href = '/login.jsp';
+                if(data.status === 'success'){
+                    window.location.href = '/login?success=true';
                 }else{
-                    alert("OPPS! there was an error");
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: data.message
+                    });
                 }
             },
             error: function(){
-                alert("Please reload the page");
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'There was an error, please reload this page'
+                });
             }
         });
-
-    });
-    $.ajax({
-        type: "GET",
-        url: '/user-service',
-        success: function(data)
-        {
-            if(data.message === 'success'){
-                window.location.href = '/login.jsp';
-            }else{
-                alert("OPPS! there was an error");
-            }
-        },
-        error: function(){
-            alert("Please reload the page");
-        }
     });
 });
 
+
+function LoadCurrentReport(companyStocks){
+    //Load  datatable
+    var oTblReport = $("#stockTable");
+
+    oTblReport.DataTable({
+        "data": companyStocks.companies,
+        "columns": [
+            {"data": "name"},
+            {"data": "symbol"},
+            {"data": "sharePrice"},
+            {"data": "currencyName"},
+            {"data": "currency"},
+            {"data": "numberOfShares"},
+            {"data": '<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#buy-stocks-modal">Buy Now</button><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#buy-stocks-modal">Sell Now</button>'}
+        ]
+    });
+}

@@ -38,3 +38,6 @@
                         application: "argon-design-system-pro"
                     });
         </script>
+        <script src="./js/jquery.dataTables.min.js"></script>
+        <script src="./js/sweetalert2.js"></script>
+        <script src="./js/index.js"></script>

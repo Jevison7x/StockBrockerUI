@@ -1,6 +1,6 @@
 <%--
-    Document   : index
-    Created on : Mar 11, 2023, 11:17:53 PM
+    Document   : profile
+    Created on : Mar 14, 2023, 5:25:38 AM
     Author     : jevis
 --%>
 
@@ -16,8 +16,6 @@
         <jsp:include page="WEB-INF/fragments/nav-bar.jsp"/>
         <!-- End Navbar -->
         <div class="wrapper">
-            <jsp:include page="WEB-INF/fragments/banner-hero.jsp"/>
-            <jsp:include page="WEB-INF/fragments/stocks-tables.jsp"/>
             <jsp:include page="WEB-INF/fragments/footer.jsp"/>
         </div>
         <!--   Core JS Files   -->
