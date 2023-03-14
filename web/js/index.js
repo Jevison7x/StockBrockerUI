@@ -83,4 +83,103 @@ $(document).ready(function(){
             }
         });
     });
+
+    $('#buy-transaction').submit(function(e){
+        e.preventDefault();
+        var username = $('#username').val().trim();
+        var companyName = $('#companyName').val().trim();
+        var noOfShares = $('#noOfShares').val();
+        var symbol = $('#first-name').val().trim();
+        $.ajax({
+            type: "POST",
+            url: '/user-service/buy-stocks',
+            data: {
+                userName: username,
+                companyName: companyName,
+                symbol: symbol,
+                noOfShares: noOfShares
+            },
+            success: function(data)
+            {
+                if(data.status === 'success'){
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Transaction Successful',
+                        text: data.message
+                    });
+                    $.ajax({
+                        type: "POST",
+                        url: '/company-service/update-company-stock',
+                        data: {
+                            symbol: symbol,
+                            noOfShares: noOfShares
+                        },
+                        success: function(data){
+
+                        },
+                        error: function(){
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: 'There was an error, please reload this page'
+                            });
+                        }
+                    });
+                    ;
+                }else{
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: data.message
+                    });
+                }
+            },
+            error: function(){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'There was an error, please reload this page'
+                });
+            }
+        });
+    });
+
+    $('#sell-transaction').submit(function(e){
+        e.preventDefault();
+        var username = $('#username').val().trim();
+        var companyName = $('#companyName').val().trim;
+        var noOfShares = $('noOfShares').val().trim();
+        $.ajax({
+            type: "POST",
+            url: '/user-service/sell-stock',
+            data: {
+                userName: username,
+                companyName: companyName,
+                noOfShares: noOfShares
+            },
+            success: function(data)
+            {
+                if(data.status === 'success'){
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Transaction Successful',
+                        text: data.message
+                    });
+                }else{
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: data.message
+                    });
+                }
+            },
+            error: function(){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'There was an error, please reload this page'
+                });
+            }
+        });
+    });
 });
