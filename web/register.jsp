@@ -37,24 +37,35 @@
                                     <div class="text-center text-muted mb-4">
                                         <h2 style="font-size: 20px"> Create your Account</h2>
                                     </div>
-                                    <form role="form">
+                                    <form role="form" id="create-account-form">
                                         <div class="form-group">
                                             <div class="input-group input-group-alternative mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                                                 </div>
-                                                <input class="form-control" placeholder="First Name" type="text">
+                                                <input class="form-control" placeholder="First Name" type="text" id="first-name">
                                             </div>
-                                            <div>
-                                                <input class="form-control" placeholder="Last Name" type="text">
+                                            <div class="input-group input-group-alternative mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                                                </div>
+                                                <input class="form-control" placeholder="Last Name" type="text" id="last-name">
                                             </div>
+                                            <div class="input-group input-group-alternative mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                                                </div>
+                                                <input class="form-control" placeholder="Username" type="text" id="userName">
+                                            </div><!-- comment -->
+
+
                                         </div>
                                         <div class="form-group">
                                             <div class="input-group input-group-alternative mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                                 </div>
-                                                <input class="form-control" placeholder="Email" type="email">
+                                                <input class="form-control" placeholder="Email" type="email" id="email">
                                             </div>
                                         </div>
                                         <div class="form-group focused">
@@ -62,20 +73,23 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                                 </div>
-                                                <input class="form-control" placeholder="Password" type="password">
+                                                <input class="form-control" placeholder="Password" type="password" id="password">
                                             </div>
                                         </div>
+                                        <div class="input-group input-group-alternative mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                                                </div>
+                                                <input class="form-control" placeholder="Confirm Password" type="password" id="confirm-password">
+                                            </div>
 
                                         <div class="row my-4">
                                             <div class="col-12">
-                                                <div class="custom-control custom-control-alternative custom-checkbox">
-                                                    <input class="custom-control-input" id="customCheckRegister" type="checkbox">
-                                                    <label class="custom-control-label" for="customCheckRegister"><span>I agree with the <a href="#">Privacy Policy</a></span></label>
-                                                </div>
+                                               
                                             </div>
                                         </div>
                                         <div class="text-center">
-                                            <button type="button" class="btn btn-primary mt-4">Create account</button>
+                                            <button id="create-account"  type="submit" class="btn btn-primary mt-4">Create account</button>
                                         </div>
                                     </form>
                                 </div>

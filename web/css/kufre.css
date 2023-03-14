@@ -143,3 +143,8 @@ label.radio-card .card-content h5 {
 #payment-modal-form{
     background-color: rgba(0, 0, 0, 0.9);
 }
+.select-shares{
+    text-align: right;
+}
+.share-selector{
+}
