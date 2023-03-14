@@ -22,7 +22,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                     </div>
-                                    <input class="form-control" placeholder="Name on Card" type="text">
+                                    <input class="form-control" placeholder="Name on Card" type="text" required/>
                                 </div>
                             </div>
                             <div class="form-group mb-3">
@@ -30,16 +30,16 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                     </div>
-                                    <input class="form-control" placeholder="Card Number" type="number">
+                                    <input class="form-control" placeholder="Card Number" type="number" required/>
                                 </div>
-
-                                <div class="form-group mb-3">
+                                <label style="margin-top: 15px;"> Expiry Date: </label>
+                                <div class="form-group">
                                     <div class="form-group">
                                         <div class="input-group input-group-alternative">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                             </div>
-                                            <input class="form-control" placeholder="Pin" type="password">
+                                            <input class="form-control" type="month" required/>
                                         </div>
                                     </div>
                                 </div>
@@ -49,14 +49,15 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                         </div>
-                                        <input class="form-control" placeholder="CVV" type="password">
+                                        <input class="form-control" placeholder="CVV" type="number" max="999" required/>
                                     </div>
                                 </div>
 
 
                                 <div class="text-center">
-                                    <button type="button" class="btn btn-primary my-4">Pay Now</button>
+                                    <button type="submit" class="btn btn-primary my-4">Pay Now</button>
                                 </div>
+                            </div>
                         </form>
                     </div>
                 </div>
