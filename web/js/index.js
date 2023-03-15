@@ -6,6 +6,8 @@ $(document).ready(function(){
 
     let table = new DataTable('#stockTable');
 
+
+// login user
     $('#login-form').submit(function(e){
         e.preventDefault();
         var userNameOrEmail = $('#username').val().trim();
@@ -43,6 +45,7 @@ $(document).ready(function(){
         });
     });
 
+//create a new user
     $('#create-account-form').submit(function(e){
         e.preventDefault();
         var userName = $('#userName').val().trim();
@@ -84,6 +87,7 @@ $(document).ready(function(){
         });
     });
 
+//buy user stocks
     $('#buy-transaction').submit(function(e){
         e.preventDefault();
         var username = $('#username').val().trim();
@@ -144,6 +148,7 @@ $(document).ready(function(){
         });
     });
 
+//sell user stock
     $('#sell-transaction').submit(function(e){
         e.preventDefault();
         var username = $('#username').val().trim();
@@ -165,6 +170,38 @@ $(document).ready(function(){
                         title: 'Transaction Successful',
                         text: data.message
                     });
+                }else{
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: data.message
+                    });
+                }
+            },
+            error: function(){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'There was an error, please reload this page'
+                });
+            }
+        });
+    });
+
+    //check user stock
+    $('#').submit(function(e){
+        e.preventDefault();
+        var username = $('#username').val().trim();
+        $.ajax({
+            type: "POST",
+            url: '/user-service/my-stocks',
+            data: {
+                username: username
+            },
+            success: function(data)
+            {
+                if(data.status === 'success'){
+
                 }else{
                     Swal.fire({
                         icon: 'error',
