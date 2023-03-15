@@ -5,17 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
-<%@page import="com.mashape.unirest.http.HttpResponse"%>
-<%@page import="com.mashape.unirest.http.JsonNode"%>
-<%@page import="com.mashape.unirest.http.Unirest"%>
-<%@page import="org.json.JSONArray"%>
-<%@page import="org.json.JSONObject"%>
-<%
-    HttpResponse<JsonNode> jsonResponse = Unirest.get("http://stockbroker.bizblock.com.ng/company-service/fetch-companies").asJson();
-    JsonNode jsonNode = jsonResponse.getBody();
-    JSONObject jsonObject = jsonNode.getObject();
-    JSONArray companiesArray = jsonObject.getJSONArray("companies");
-%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div style="padding-left: 30px; padding-right: 30px">
     <h1 class="align-content">HOT STOCKS</h1>
     <table class="stock" id="stockTable">
@@ -32,19 +22,16 @@
             </tr>
         </thead>
         <tbody>
-<%
-    for(int i = 0; i < companiesArray.length(); i++)
-    {
-        JSONObject company = companiesArray.getJSONObject(i);
-%>
+        <c:forEach var="companyStock" items="${companyStocks}">
+            <jsp:useBean id="companyStock" class="com.bizblock.library.company.CompanyStock"/>
             <tr>
-                <td><%=company.getString("name")%></td>
-                <td><img src="<%=company.getString("logo")%>" class="tableImage"  style="height: 20px"></td>
-                <td><%=company.getString("symbol")%></td>
-                <td style="text-align: right;"><%=company.getDouble("sharePrice")%></td>
-                <td style="text-align: right;"><%=company.getInt("numberOfShares")%></td>
-                <td><%=company.getString("currencyName")%></td>
-                <td><%=company.getString("currency")%></td>
+                <td>${companyStock.name}</td>
+                <td><img src="${companyStock.logo}" class="tableImage" style="height: 20px"></td>
+                <td>${companyStock.symbol}</td>
+                <td style="text-align: right;">${companyStock.sharePrice}</td>
+                <td style="text-align: right;">${companyStock.numberOfShares}</td>
+                <td>${companyStock.currencyName}</td>
+                <td>${companyStock.currency}</td>
                 <td>
                     <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#buy-stocks-modal">
                         Buy Now
@@ -54,9 +41,7 @@
                     </button>
                 </td>
             </tr>
-<%
-    }
-%>
+        </c:forEach>
         </tbody>
     </table>
     <jsp:include page="/WEB-INF/fragments/buy-modal.jsp"/>
