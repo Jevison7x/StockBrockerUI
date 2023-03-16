@@ -75,6 +75,7 @@
                     <div id="no-user-menu" class="dropdown-menu">
                         <a href="register" class="dropdown-item">Register</a>
                         <a href="login" class="dropdown-item">Login</a>
+                        <a href="profile" class="dropdown-item">Profile</a>
                     </div>
                 </li>
             </ul>
