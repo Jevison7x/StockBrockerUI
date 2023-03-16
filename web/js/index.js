@@ -92,45 +92,45 @@ $(document).ready(function(){
             $('#buy-stocks-modal').modal('show');
             var user = localStorage.getItem("user");
             console.log(user);
-            var username = user.userName;
-            var companyName = $('#companyName').val().trim();
-            var noOfShares = $('#noOfShares').val().trim();
-            var symbol = $('#symbol').val().trim();
+//            var username = user.userName;
+//            var companyName = $('#companyName').val().trim();
+//            var noOfShares = $('#noOfShares').val().trim();
+//            var symbol = $('#symbol').val().trim();
 
-            $.ajax({
-                type: "POST",
-                url: '/user-service/buy-stocks',
-                data: {
-                    userName: username,
-                    companyName: companyName,
-                    noOfShares: noOfShares,
-                    symbol: symbol
-                },
-                success: function(data)
-                {
-                    if(data.status === 'success'){
-                        $('#buy-stocks-modal').modal('hide');
-                        Swal.fire({
-                            icon: 'Success',
-                            title: 'Successfuly Brought',
-                            text: 'You have successfully obtained:' + noOfShares + 'shares of' + companyName
-                        });
-                    }else{
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Oops...',
-                            text: data.message
-                        });
-                    }
-                },
-                error: function(){
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'There was an error, please reload this page'
-                    });
-                }
-            });
+//            $.ajax({
+//                type: "POST",
+//                url: '/user-service/buy-stocks',
+//                data: {
+//                    userName: username,
+//                    companyName: companyName,
+//                    noOfShares: noOfShares,
+//                    symbol: symbol
+//                },
+//                success: function(data)
+//                {
+//                    if(data.status === 'success'){
+//                        $('#buy-stocks-modal').modal('hide');
+//                        Swal.fire({
+//                            icon: 'Success',
+//                            title: 'Successfuly Brought',
+//                            text: 'You have successfully obtained:' + noOfShares + 'shares of' + companyName
+//                        });
+//                    }else{
+//                        Swal.fire({
+//                            icon: 'error',
+//                            title: 'Oops...',
+//                            text: data.message
+//                        });
+//                    }
+//                },
+//                error: function(){
+//                    Swal.fire({
+//                        icon: 'error',
+//                        title: 'Oops...',
+//                        text: 'There was an error, please reload this page'
+//                    });
+//                }
+//            });
         }
     });
 
