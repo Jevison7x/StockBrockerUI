@@ -134,3 +134,14 @@ label.radio-card .card-content h5 {
 }
 .share-selector{
 }
+#price-per-share label{
+    font-size: 20px;
+    margin-left: 14px;
+    color: #2B3467;
+    font-family: inherit;
+    margin-top: 5px;
+}
+#view-price-btn{
+    margin-left: 55px;
+    margin-bottom: 10px;
+}

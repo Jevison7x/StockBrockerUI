@@ -13,8 +13,14 @@
             <div class="modal-body p-0">
                 <div class="card bg-secondary shadow border-0 mb-0">
                     <div class="card-body px-lg-5 py-lg-5">
-                        <div class="text-center text-muted mb-4">
-                            <h3>Please fill your card details</h3>
+                        <button class="btn btn-sm btn-primary" type="button" id="view-price-btn">View Price in Dollar($)</button>
+                        <div class="row" id="payment-modal-price">
+                            <div class="col-md-8">
+                                <label>Price per share: </label>
+                            </div>
+                            <div class="col-md-4">
+                                <label>$35.6 </label>
+                            </div>
                         </div>
                         <form role="form">
                             <div class="form-group mb-3">

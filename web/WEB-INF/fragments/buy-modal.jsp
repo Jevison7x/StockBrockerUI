@@ -38,15 +38,24 @@
                     </div>
                 </div>
 
+                <div class="clearfix"></div>
 
-            </div>
-            <!--Footer-->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-                <button class="btn btn-primary" id="pay-now" data-toggle="modal" data-target="#payment-modal-form">Pay Now</button>
+                <div class="row" id="price-per-share">
+                    <div class="col-md-8">
+                        <label>Price per share: </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label>$35.6 </label>
+                    </div>
+                </div>
+
+                <!--Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" id="pay-now" data-toggle="modal" data-target="#payment-modal-form">Pay Now</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<jsp:include page="payment.jsp"/>
-<!-- Modal: modalCart -->
+    <jsp:include page="payment.jsp"/>
+    <!-- Modal: modalCart -->
