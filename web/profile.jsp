@@ -8,48 +8,102 @@
 <!DOCTYPE html>
 <html lang="en">
 
-        <meta charset="utf-8" />
-        <jsp:include page="WEB-INF/fragments/head-codes.jsp"/>
+    <meta charset="utf-8" />
+    <jsp:include page="WEB-INF/fragments/head-codes.jsp"/>
 
     <body class="index-page">
         <!-- Navbar -->
         <jsp:include page="WEB-INF/fragments/nav-bar.jsp"/>
-        <!-- End Navbar -->
-        <div class="col-12">
-            <div class="my-5">
-                <h3>My Profile</h3><hr>
-
-                    <div class="col-xxl-8 mb-5 mb-xxl-0">
-                        <div class="bg-secondary-soft px-4 py-5 rounded">
-                            <div class="row g-3">
-                                <h4 class="mb-4 mt-0">Contact detail</h4>
-                                <div class="col-md-6">
-                                    <label class="form-label">First Name *</label>
-                                    <input type="text" class="form-control" placeholder="" aria-label="First name" value="Scaralet">
+        <div class="p-6">
+            <div class="row">
+                <div class="col-6">
+                    <div class="modal-content">
+                        <div class="modal-body p-0">
+                            <div class="card bg-secondary shadow border-0 mb-0">
+                                <div class="card-body px-lg-5 py-lg-5">
+                                    <div class="text-center">
+                                        <h5 >User Details:</h5>
+                                    </div>
+                                    <form role="form">
+                                        <div class="form-group mb-3">
+                                            <div class="input-group input-group-alternative">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                                                </div>
+                                                <input class="form-control" placeholder="First Name"  disabled=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <div class="input-group input-group-alternative">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                                                </div>
+                                                <input class="form-control" placeholder="Last Name"  disabled=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <div class="input-group input-group-alternative">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                                                </div>
+                                                <input class="form-control" placeholder="User Name"  disabled=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <div class="input-group input-group-alternative">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                                </div>
+                                                <input class="form-control" placeholder="Email"  disabled=""/>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Last Name *</label>
-                                    <input type="text" class="form-control" placeholder="" aria-label="Last name" value="Doe">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="inputEmail4" class="form-label">Email *</label>
-                                    <input type="email" class="form-control" id="inputEmail4" value="example@homerealty.com">
-                                </div> 
-                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="col">
+                    <h4>Stocks Owned</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Company Name</th>
+                                <th>Symbol</th>
+                                <th>Number Of Shares</th>
+                                <th>Transaction</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Amazon</td>
+                                <td>AMA</td>
+                                <td>23000</td>
+                                <td class="td-actions text-right">
+                                    <button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#buy-stocks-modal">
+                                        Sell Now
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+        </div>
+
+        <div class="wrapper">
+            <jsp:include page="WEB-INF/fragments/footer.jsp"/>
+        </div>
+        <!--   Core JS Files   -->
+        <jsp:include page="WEB-INF/fragments/scripts.jsp"/>
+        <jsp:include page="WEB-INF/fragments/buy-modal.jsp"/>
+    </body>
+</html>
 
 
 
 
-                    <div class="wrapper">
-                        <jsp:include page="WEB-INF/fragments/footer.jsp"/>
-                    </div>
-                    <!--   Core JS Files   -->
-                    <jsp:include page="WEB-INF/fragments/scripts.jsp"/>
 
 
-                    </body>
-                    </html>
+
+
