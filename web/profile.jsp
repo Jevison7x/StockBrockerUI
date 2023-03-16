@@ -24,40 +24,38 @@
                                     <div class="text-center">
                                         <h5 >User Details:</h5>
                                     </div>
-                                    <form role="form">
-                                        <div class="form-group mb-3">
-                                            <div class="input-group input-group-alternative">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
-                                                </div>
-                                                <input class="form-control" placeholder="First Name"  disabled=""/>
+                                    <div class="form-group mb-3">
+                                        <div class="input-group input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
                                             </div>
+                                            <input class="form-control" placeholder="First Name"  disabled=""/>
                                         </div>
-                                        <div class="form-group mb-3">
-                                            <div class="input-group input-group-alternative">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
-                                                </div>
-                                                <input class="form-control" placeholder="Last Name"  disabled=""/>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <div class="input-group input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
                                             </div>
+                                            <input class="form-control" placeholder="Last Name"  disabled=""/>
                                         </div>
-                                        <div class="form-group mb-3">
-                                            <div class="input-group input-group-alternative">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
-                                                </div>
-                                                <input class="form-control" placeholder="User Name"  disabled=""/>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <div class="input-group input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
                                             </div>
+                                            <input class="form-control" placeholder="User Name"  disabled=""/>
                                         </div>
-                                        <div class="form-group mb-3">
-                                            <div class="input-group input-group-alternative">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                                                </div>
-                                                <input class="form-control" placeholder="Email"  disabled=""/>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <div class="input-group input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                             </div>
+                                            <input class="form-control" placeholder="Email"  disabled=""/>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -78,9 +76,9 @@
                             <tr>
                                 <td>Amazon</td>
                                 <td>AMA</td>
-                                <td>23000</td> 
+                                <td>23000</td>
                                 <td class="td-actions text-right">
-                                    <button type="button" class="btn btn-sm btn-warning" id="sell">
+                                    <button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#sell-stocks-modal">
                                         Sell Now
                                     </button>
                                 </td>
@@ -91,6 +89,46 @@
             </div>
         </div>
 
+        <div class="modal fade" id="sell-stocks-modal" tabindex="-1" role="dialog" aria-labelledby="sell-stocks-modal"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header">
+                        <h3>Sell Transaction</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <!--Body-->
+                    <form id="sell">
+                        <div class="modal-body">
+                            <div class="text-center text-muted mb-4" style="padding-left: 30px; padding-right: 30px">
+                                <h3>Company Name: Apple</h3>
+                            </div>
+                            <div id="number-of-shares-selector">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <h5 class="select-shares">Select Number of Shares:</h5>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <input type="number" class="form-control share-selector"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <!--Footer-->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+                                <button class="btn btn-primary" type="submit">Sell Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <jsp:include page="payment.jsp"/>
+        <!-- Modal: modalCart -->
         <div class="wrapper">
             <jsp:include page="WEB-INF/fragments/footer.jsp"/>
         </div>
