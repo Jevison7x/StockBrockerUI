@@ -127,8 +127,6 @@
                 </div>
             </div>
         </div>
-        <jsp:include page="payment.jsp"/>
-        <!-- Modal: modalCart -->
         <div class="wrapper">
             <jsp:include page="WEB-INF/fragments/footer.jsp"/>
         </div>

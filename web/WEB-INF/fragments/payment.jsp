@@ -15,11 +15,18 @@
                     <div class="card-body px-lg-5 py-lg-5">
                         <button class="btn btn-sm btn-primary" type="button" id="view-price-btn">View Price in Dollar($)</button>
                         <div class="row" id="payment-modal-price">
-                            <div class="col-md-8">
-                                <label>Price per share: </label>
+                            <div class="col-md-6">
+                                <select class="form-select" id="userCurrency">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
                             </div>
-                            <div class="col-md-4">
-                                <label>$35.6 </label>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Regular" class="form-control" disabled />
+                                </div>
                             </div>
                         </div>
                         <form role="form">

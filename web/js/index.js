@@ -22,9 +22,11 @@ $(document).ready(function(){
             success: function(data)
             {
                 if(data.status === 'success'){
-                    localStorage.setItem("user", data.user);
-                    localStorage.setItem("token", data.userToken);
-                    window.location.href = '/';
+
+                    console.log(data);
+//                    localStorage.setItem("user", data.user);
+//                    localStorage.setItem("token", data.userToken);
+//                    window.location.href = '/';
                 }else{
                     Swal.fire({
                         icon: 'error',
@@ -96,7 +98,10 @@ $(document).ready(function(){
 //            var companyName = $('#companyName').val().trim();
 //            var noOfShares = $('#noOfShares').val().trim();
 //            var symbol = $('#symbol').val().trim();
-
+//            $('#pay-now').click(function(){
+//                $('#payment-modal-form').modal('show');
+//
+//            });
 //            $.ajax({
 //                type: "POST",
 //                url: '/user-service/buy-stocks',
