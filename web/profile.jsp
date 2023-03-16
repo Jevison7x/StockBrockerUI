@@ -78,9 +78,9 @@
                             <tr>
                                 <td>Amazon</td>
                                 <td>AMA</td>
-                                <td>23000</td>
+                                <td>23000</td> 
                                 <td class="td-actions text-right">
-                                    <button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#buy-stocks-modal">
+                                    <button type="button" class="btn btn-sm btn-warning" id="sell">
                                         Sell Now
                                     </button>
                                 </td>
