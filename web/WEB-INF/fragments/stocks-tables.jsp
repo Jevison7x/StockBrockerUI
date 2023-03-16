@@ -36,9 +36,6 @@
                     <button type="button" id="buy" class="btn btn-sm btn-success" data-toggle="modal" data-target="#buy-stocks-modal">
                         Buy Now
                     </button>
-                    <button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#buy-stocks-modal">
-                        Sell Now 
-                    </button>
                 </td>
             </tr>
         </c:forEach>
