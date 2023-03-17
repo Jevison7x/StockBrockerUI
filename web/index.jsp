@@ -23,5 +23,29 @@
         <!--   Core JS Files   -->
         <jsp:include page="WEB-INF/fragments/scripts.jsp"/>
         <jsp:include page="WEB-INF/fragments/buy-modal.jsp"/>
+        <script>
+            const currencySelector = document.getElementById('currency-selector');
+
+            fetch('https://api.apilayer.com/exchangerates_data/latest?apikey=7Ct4899ogYI4n73hCpQ0RaNEgDTbzILC')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Check if rates property exists in data object
+                        if(!data.rates){
+                            throw new Error('Rates not available');
+                        }
+
+                        // Extract currency codes from data
+                        const currencies = Object.keys(data.rates);
+
+                        // Populate select field with currency options
+                        currencies.forEach(currency => {
+                            const option = document.createElement('option');
+                            option.value = currency;
+                            option.text = currency;
+                            currencySelector.add(option);
+                        });
+                    })
+                    .catch(error => console.error(error));
+        </script>
     </body>
 </html>

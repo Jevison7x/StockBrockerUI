@@ -189,4 +189,45 @@ $(document).ready(function(){
             });
         }
     });
+
+    $('#currency-selector').on("change", function(){
+        // Make the API request
+        var userCurrency = $('#currency-selector').val();
+        var amount = $('#paymentAmount').val();
+        var companyCurrency = 'USD';
+        $.ajax({
+            type: "GET",
+            url: '/user-service/currency-converter',
+            data: {
+                currencyPayment: userCurrency,
+                amount: amount,
+                companyCurrency: companyCurrency
+            },
+            success: function(data)
+            {
+                if(data.status === 'success'){
+                    var updatedValue = data.currencyConverted;
+                    var noOfSshares = amount / updatedValue;
+                    console.log(updatedValue);
+                    console.log(noOfSshares);
+                    $('#noOfShares').val(noOfSshares);
+
+                }else{
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: data.message
+                    });
+                }
+            },
+            error: function(){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'There was an error, please reload this page'
+                });
+            }
+        });
+    });
+
 });

@@ -23,24 +23,30 @@
             <div class="modal-body">
 
                 <div class="text-center text-muted mb-4" style="padding-left: 30px; padding-right: 30px">
-                    <h3>Company Symbol: Apple</h3>
+                    <h3>Company Symbol: </h3>
                     <img src="./images/apple.png" style="width: 30px">
                 </div>
                 <form id="buy-stock">
-                    <div id="number-of-shares-selector">
+                    <div id="number-of-shares-selector" class="form-group">
                         <div class="row">
                             <div class="col-md-7">
-                                <h5 class="select-shares">Select Number of Shares:</h5>
+                                <label for="paymentAmount" class="select-shares">Select Payment Amount:</label>
+                                <input type="number" class="form-control share-selector" id="paymentAmount"/>
                             </div>
                             <div class="col-md-5">
-                                <input type="number" class="form-control share-selector" id="noOfShares"/>
                                 <input id="companySymbol" hidden=""/>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="currency-selector" class="select-shares">Select Payment Currency:</label>
+                                <select id="currency-selector" class="form-control"></select>
                             </div>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
-                    <div class="row" id="price-per-share">
-
+                    <div class="row pt-2" id="price-per-share">
+                        <div class="col-md-12">
+                            <label for="noOfShares" class="select-shares">Number of Shares:</label>
+                            <input type="number" class="form-control share-selector" id="noOfShares" disabled=""/>
+                        </div>
                     </div>
                     <!--Footer-->
                     <div class="modal-footer">
