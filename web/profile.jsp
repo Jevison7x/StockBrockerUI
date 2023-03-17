@@ -4,6 +4,7 @@
     Author     : jevis
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
  <jsp:useBean id="companyStock" class="com.bizblock.library.company.CompanyStock"/>
 <!DOCTYPE html>
@@ -26,16 +27,16 @@
                                         <h5 >User Details:</h5>
                                     </div>
                                     <div class="form-group mb-3">
-                                        <label>First Name:<span id="firstname"></span></label>
+                                        <label>First Name: <span id="firstname"></span></label>
                                     </div>
                                     <div class="form-group mb-3">
-                                        <label>Last Name:<span id="lastname"></span></label>
+                                        <label>Last Name: <span id="lastname"></span></label>
                                     </div>
                                     <div class="form-group mb-3">
-                                        <label>Username:<span id="username"></span></label>
+                                        <label>Username: <span id="username"></span></label>
                                     </div>
                                     <div class="form-group mb-3">
-                                        <label >Email:<span id="email"></span></label>
+                                        <label >Email: <span id="email"></span></label>
                                     </div>
                                 </div>
                             </div>
@@ -53,11 +54,14 @@
                                 <th>Transaction</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <c:forEach var="userStock" items="${userStocks}">
+                            <jsp:useBean id="userStock" class="com.bizblock.library.user.UserStock"/>
+                        </c:forEach>
+                        <tbody>  
                             <tr>
-                                <td>Amazon</td>
-                                <td>AMA</td>
-                                <td>23000</td>
+                                <td >${userStock.companyName}</td>
+                                <td id="symbol">${userStock.symbol}</td>
+                                <td id="numberOfShares">${userStock.numberOfShares}</td>
                                 <td class="td-actions text-right">
                                     <button type="button" class="btn btn-sm btn-warning" id="sell-modal" data-order-id="${companyStock.symbol}">
                                         Sell Now
@@ -113,8 +117,10 @@
             <jsp:include page="WEB-INF/fragments/footer.jsp"/>
         </div>
         <!--   Core JS Files   -->
+
+
         <jsp:include page="WEB-INF/fragments/scripts.jsp"/>
-        <jsp:include page="js/profile.js"/>
+         <script src="js/profile.js"></script>
         <jsp:include page="WEB-INF/fragments/buy-modal.jsp"/>
     </body>
 </html>

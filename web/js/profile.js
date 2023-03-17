@@ -10,15 +10,15 @@ $(document).ready(function(){
         $('#lastname').append("<span>" + lastname + "</span>");
         $('#email').append("<span>" + email + "</span>");
         $('#username').append("<span>" + username + "</span>");
+        console.log(email);
         $.ajax({
             type: "POST",
-            url: '/user-service/my-stocks',
+            url: '/my-stock',
             data: {
                 username: username
             },
             success: function(data)
             {
-
                 if(data.status === 'success'){
 
                 }else{

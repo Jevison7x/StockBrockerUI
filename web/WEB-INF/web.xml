@@ -27,6 +27,10 @@
         <servlet-name>Register Page</servlet-name>
         <jsp-file>/register.jsp</jsp-file>
     </servlet>
+    <servlet>
+        <servlet-name>MyStockServlet</servlet-name>
+        <servlet-class>com.bizblock.MyStockServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UIServlet</servlet-name>
         <url-pattern>/ui</url-pattern>
@@ -38,6 +42,10 @@
     <servlet-mapping>
         <servlet-name>Register Page</servlet-name>
         <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MyStockServlet</servlet-name>
+        <url-pattern>/my-stock</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
