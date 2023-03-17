@@ -31,6 +31,10 @@
         <servlet-name>MyStockServlet</servlet-name>
         <servlet-class>com.bizblock.MyStockServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Profile Page</servlet-name>
+        <jsp-file>/profile.jsp</jsp-file>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UIServlet</servlet-name>
         <url-pattern>/ui</url-pattern>
@@ -46,6 +50,10 @@
     <servlet-mapping>
         <servlet-name>MyStockServlet</servlet-name>
         <url-pattern>/my-stock</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Profile Page</servlet-name>
+        <url-pattern>/profile</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

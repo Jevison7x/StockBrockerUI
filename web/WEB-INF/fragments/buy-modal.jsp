@@ -23,35 +23,41 @@
             <div class="modal-body">
 
                 <div class="text-center text-muted mb-4" style="padding-left: 30px; padding-right: 30px">
-                    <h3>Company Symbol: </h3>
-                    <img src="./images/apple.png" style="width: 30px">
+                    <h3 id="modal-heading">Buy </h3>
+                    <img id="modal-logo" src="" style="width: 100px">
                 </div>
                 <form id="buy-stock">
                     <div id="number-of-shares-selector" class="form-group">
                         <div class="row">
-                            <div class="col-md-7">
-                                <label for="paymentAmount" class="select-shares">Select Payment Amount:</label>
-                                <input type="number" class="form-control share-selector" id="paymentAmount"/>
+                            <div class="col-md-6">
+                                <label for="noOfShares" class="select-shares">Select number of shares:</label>
+                                <input type="number" class="form-control share-selector" id="noOfShares" value="1"/>
                             </div>
-                            <div class="col-md-5">
-                                <input id="companySymbol" hidden=""/>
+                            <div class="col-md-6">
+                                <label for="modal-share-price" class="select-shares">Share Price:</label>
+                                <input type="text" class="form-control" id="modal-share-price" value="" readonly/>
+                                <input id="modal-company-symbol" type="hidden" value=""/>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <label for="currency-selector" class="select-shares">Select Payment Currency:</label>
                                 <select id="currency-selector" class="form-control"></select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="company-currency" class="select-shares">Company Currency:</label>
+                                <input type="text" class="form-control" id="modal-currency-symbol" value="" readonly/>
                             </div>
                         </div>
                     </div>
                     <div class="row pt-2" id="price-per-share">
                         <div class="col-md-12">
-                            <label for="noOfShares" class="select-shares">Number of Shares:</label>
-                            <input type="number" class="form-control share-selector" id="noOfShares" disabled=""/>
+                            <label for="paymentAmount" class="select-shares">Total Payment Amount:</label>
+                            <input type="number" class="form-control share-selector" id="paymentAmount" readonly/>
                         </div>
                     </div>
                     <!--Footer-->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-                        <button class="btn btn-primary" id="pay-now">Pay Now</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                        <button class="btn btn-success" id="pay-now">Pay Now</button>
                     </div>
                 </form>
             </div>

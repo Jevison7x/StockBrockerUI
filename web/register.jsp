@@ -99,5 +99,6 @@
         </div>
         <!--   Core JS Files   -->
         <jsp:include page="WEB-INF/fragments/scripts.jsp"/>
+        <script src="./js/register.js"></script>
     </body>
 </html>

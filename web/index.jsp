@@ -9,6 +9,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <title>Stock Broker</title>
         <jsp:include page="WEB-INF/fragments/head-codes.jsp"/>
     </head>
     <body class="index-page">
@@ -20,9 +21,10 @@
             <jsp:include page="WEB-INF/fragments/stocks-tables.jsp"/>
             <jsp:include page="WEB-INF/fragments/footer.jsp"/>
         </div>
+        <jsp:include page="WEB-INF/fragments/buy-modal.jsp"/>
         <!--   Core JS Files   -->
         <jsp:include page="WEB-INF/fragments/scripts.jsp"/>
-        <jsp:include page="WEB-INF/fragments/buy-modal.jsp"/>
+        <script src="./js/index.js"></script>
         <script>
             const currencySelector = document.getElementById('currency-selector');
 

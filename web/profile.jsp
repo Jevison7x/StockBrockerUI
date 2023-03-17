@@ -6,13 +6,14 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
- <jsp:useBean id="companyStock" class="com.bizblock.library.company.CompanyStock"/>
+<jsp:useBean id="companyStock" class="com.bizblock.library.company.CompanyStock"/>
 <!DOCTYPE html>
 <html lang="en">
-
-    <meta charset="utf-8" />
-    <jsp:include page="WEB-INF/fragments/head-codes.jsp"/>
-
+    <head>
+        <meta charset="utf-8" />
+        <title>Profile</title>
+        <jsp:include page="WEB-INF/fragments/head-codes.jsp"/>
+    </head>
     <body class="index-page">
         <!-- Navbar -->
         <jsp:include page="WEB-INF/fragments/nav-bar.jsp"/>
@@ -45,7 +46,7 @@
                 </div>
                 <div class="col">
                     <h4>Stocks Owned</h4>
-                    <table class="table">
+                    <table class="table" id="user-stock-table">
                         <thead>
                             <tr>
                                 <th class="text-center">Company Name</th>
@@ -54,20 +55,8 @@
                                 <th>Transaction</th>
                             </tr>
                         </thead>
-                        <c:forEach var="userStock" items="${userStocks}">
-                            <jsp:useBean id="userStock" class="com.bizblock.library.user.UserStock"/>
-                        </c:forEach>
-                        <tbody>  
-                            <tr>
-                                <td >${userStock.companyName}</td>
-                                <td id="symbol">${userStock.symbol}</td>
-                                <td id="numberOfShares">${userStock.numberOfShares}</td>
-                                <td class="td-actions text-right">
-                                    <button type="button" class="btn btn-sm btn-warning" id="sell-modal" data-order-id="${companyStock.symbol}">
-                                        Sell Now
-                                    </button>
-                                </td>
-                            </tr>
+                        <tbody>
+
                         </tbody>
                     </table>
                 </div>
@@ -120,7 +109,7 @@
 
 
         <jsp:include page="WEB-INF/fragments/scripts.jsp"/>
-         <script src="js/profile.js"></script>
+         <script src="./js/profile.js"></script>
         <jsp:include page="WEB-INF/fragments/buy-modal.jsp"/>
     </body>
 </html>

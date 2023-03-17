@@ -26,14 +26,18 @@
             <jsp:useBean id="companyStock" class="com.bizblock.library.company.CompanyStock"/>
             <tr>
                 <td>${companyStock.name}</td>
-                <td><img src="${companyStock.logo}" class="tableImage" style="height: 20px"></td>
+                <td class="logo-column"><img src="${companyStock.logo}" class="tableImage" style="height: 20px"></td>
                 <td>${companyStock.symbol}</td>
                 <td style="text-align: right;">${companyStock.sharePrice}</td>
                 <td style="text-align: right;">${companyStock.numberOfShares}</td>
                 <td>${companyStock.currencyName}</td>
                 <td>${companyStock.currency}</td>
                 <td>
-                    <button type="button" id="buy" class="btn btn-sm btn-success" data-order-id="${companyStock.symbol}">
+                    <button type="button" class="btn btn-sm btn-success buy"
+                            data-order-id="${companyStock.symbol}"
+                            data-order-currency="${companyStock.currencyName}"
+                            data-order-share-price="${companyStock.sharePrice}"
+                            data-order-company-name="${companyStock.name}">
                         Buy Now
                     </button>
                 </td>

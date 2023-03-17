@@ -66,6 +66,9 @@
                                             <input class="custom-control-input" id="customCheckLogin" type="checkbox">
                                             <label class="custom-control-label" for="customCheckLogin"><span>Remember me</span></label>
                                         </div>
+                                        <div>
+                                            Don't have an account? <a href="./register">Register Here</a>
+                                        </div>
                                         <div class="text-center">
                                             <button type="submit" class="btn btn-primary my-4">Sign in</button>
                                         </div>
@@ -76,10 +79,10 @@
                     </div>
                 </div>
             </section>
-
             <jsp:include page="WEB-INF/fragments/footer.jsp"/>
         </div>
         <!--   Core JS Files   -->
         <jsp:include page="WEB-INF/fragments/scripts.jsp"/>
+        <script src="./js/login.js"></script>
     </body>
 </html>

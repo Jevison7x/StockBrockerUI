@@ -75,7 +75,6 @@
                     <div id="no-user-menu" class="dropdown-menu">
                         <a href="register" class="dropdown-item">Register</a>
                         <a href="login" class="dropdown-item">Login</a>
-                        <a href="profile" class="dropdown-item">Profile</a>
                     </div>
                 </li>
             </ul>
@@ -86,7 +85,7 @@
                     </a>
                 </li>
                 <li class="nav-item d-none d-lg-block">
-                    <a  href="/profile.jsp" class="btn btn-primary btn-icon">
+                    <a  href="/profile" class="btn btn-primary btn-icon">
                         <span class="btn-inner--icon">
                             <i class="fa fa-shopping-cart"></i>
                         </span>
