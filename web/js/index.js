@@ -24,9 +24,9 @@ $(document).ready(function(){
                 if(data.status === 'success'){
 
                     console.log(data);
-//                    localStorage.setItem("user", data.user);
-//                    localStorage.setItem("token", data.userToken);
-//                    window.location.href = '/';
+                    localStorage.setItem("user", JSON.stringify(data.user));
+                    localStorage.setItem("token", JSON.stringify(data.userToken));
+                    window.location.href = '/';
                 }else{
                     Swal.fire({
                         icon: 'error',
@@ -87,136 +87,106 @@ $(document).ready(function(){
     });
 
     $('#buy').click(function(e){
+        var companySymbol = $(this).attr('data-order-id');
+        $('#companySymbol').val(companySymbol);
         e.preventDefault();
         if(localStorage.getItem("user") === null){
             window.location.href = '/login';
         }else{
             $('#buy-stocks-modal').modal('show');
             var user = localStorage.getItem("user");
-            console.log(user);
-//            var username = user.userName;
-//            var companyName = $('#companyName').val().trim();
-//            var noOfShares = $('#noOfShares').val().trim();
-//            var symbol = $('#symbol').val().trim();
-//            $('#pay-now').click(function(){
-//                $('#payment-modal-form').modal('show');
-//
-//            });
-//            $.ajax({
-//                type: "POST",
-//                url: '/user-service/buy-stocks',
-//                data: {
-//                    userName: username,
-//                    companyName: companyName,
-//                    noOfShares: noOfShares,
-//                    symbol: symbol
-//                },
-//                success: function(data)
-//                {
-//                    if(data.status === 'success'){
-//                        $('#buy-stocks-modal').modal('hide');
-//                        Swal.fire({
-//                            icon: 'Success',
-//                            title: 'Successfuly Brought',
-//                            text: 'You have successfully obtained:' + noOfShares + 'shares of' + companyName
-//                        });
-//                    }else{
-//                        Swal.fire({
-//                            icon: 'error',
-//                            title: 'Oops...',
-//                            text: data.message
-//                        });
-//                    }
-//                },
-//                error: function(){
-//                    Swal.fire({
-//                        icon: 'error',
-//                        title: 'Oops...',
-//                        text: 'There was an error, please reload this page'
-//                    });
-//                }
-//            });
-        }
-    });
-
-    $('#sell').submit(function(e){
-        e.preventDefault();
-        if(localStorage.getItem("user") !== null){
-            var user = localStorage.getItem("user");
-            var username = user.userName;
-            var companyName = $('#companyName').val().trim();
+            var usrObj = JSON.parse(user);
+            var username = usrObj.userName;
+            var symbol = $('#companySymbol').val().trim();
+            console.log(symbol);
+            console.log(username);
             var noOfShares = $('#noOfShares').val().trim();
-
-            $.ajax({
-                type: "POST",
-                url: 'user-service/sell-stock',
-                data: {
-                    userName: username,
-                    companyName: companyName,
-                    noOfShares: noOfShares
-                },
-                success: function(data)
-                {
-                    if(data.status === 'success'){
-                        Swal.fire({
-                            icon: 'Success',
-                            title: 'Successfuly Sold',
-                            text: 'You have successfully Sold:' + noOfShares + 'shares from' + companyName
-                        });
-                    }else{
+            $('#buy-stock').submit(function(e){
+                e.preventDefault();
+                $('#buy-stocks-modal').modal('hide');
+                $.ajax({
+                    type: "POST",
+                    url: '/user-service/buy-stocks',
+                    data: {
+                        userName: username,
+                        noOfShares: noOfShares,
+                        symbol: symbol
+                    },
+                    success: function(data)
+                    {
+                        if(data.status === 'success'){
+                            Swal.fire({
+                                icon: 'Success',
+                                title: 'Successfuly Brought',
+                                text: 'You have successfully obtained:' + noOfShares + 'shares of' + symbol
+                            });
+                        }else{
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: data.message
+                            });
+                        }
+                    },
+                    error: function(){
                         Swal.fire({
                             icon: 'error',
                             title: 'Oops...',
-                            text: data.message
+                            text: 'There was an error, please reload this page'
                         });
                     }
-                },
-                error: function(){
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'There was an error, please reload this page'
-                    });
-                }
+                });
             });
         }
     });
 
-    $('#profile').click(function(e){
+    $('#sell-modal').click(function(e){
+        $('#sell-stocks-modal').modal('show');
+        var companySymbol = $(this).attr('data-order-id');
+        $('#companySymbol').val(companySymbol);
         e.preventDefault();
         if(localStorage.getItem("user") !== null){
             var user = localStorage.getItem("user");
-            var username = user.userName;
-
-            $.ajax({
-                type: "POST",
-                url: 'user-service/user-service/my-stocks',
-                data: {
-                    username: username
-                },
-                success: function(data)
-                {
-                    if(data.status === 'success'){
-
-                    }else{
+            var usrObj = JSON.parse(user);
+            var username = usrObj.userName;
+            var companySymbol = $('#companySymbol').val().trim();
+            var noOfShares = $('#noOfShares').val().trim();
+            $('#sell').submit(function(e){
+                $('#sell-stocks-modal').modal('hide');
+                e.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: 'user-service/sell-stock',
+                    data: {
+                        userName: username,
+                        companySymbol: companySymbol,
+                        noOfShares: noOfShares
+                    },
+                    success: function(data)
+                    {
+                        if(data.status === 'success'){
+                            Swal.fire({
+                                icon: 'Success',
+                                title: 'Successfuly Sold',
+                                text: 'You have successfully Sold:' + noOfShares + 'shares from' + companySymbol
+                            });
+                        }else{
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: data.message
+                            });
+                        }
+                    },
+                    error: function(){
                         Swal.fire({
                             icon: 'error',
                             title: 'Oops...',
-                            text: data.message
+                            text: 'There was an error, please reload this page'
                         });
                     }
-                },
-                error: function(){
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'There was an error, please reload this page'
-                    });
-                }
+                });
             });
-        }else{
-            window.location.href = '/login';
         }
     });
-
 });

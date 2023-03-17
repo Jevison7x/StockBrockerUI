@@ -23,37 +23,31 @@
             <div class="modal-body">
 
                 <div class="text-center text-muted mb-4" style="padding-left: 30px; padding-right: 30px">
-                    <h3>Company Name: Apple</h3>
+                    <h3>Company Symbol: Apple</h3>
                     <img src="./images/apple.png" style="width: 30px">
                 </div>
-
-                <div id="number-of-shares-selector">
-                    <div class="row">
-                        <div class="col-md-7">
-                            <h5 class="select-shares">Select Number of Shares:</h5>
+                <form id="buy-stock">
+                    <div id="number-of-shares-selector">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h5 class="select-shares">Select Number of Shares:</h5>
+                            </div>
+                            <div class="col-md-5">
+                                <input type="number" class="form-control share-selector" id="noOfShares"/>
+                                <input id="companySymbol" hidden=""/>
+                            </div>
                         </div>
-                        <div class="col-md-5">
-                            <input type="number" class="form-control share-selector"/>
-                        </div>
                     </div>
-                </div>
+                    <div class="clearfix"></div>
+                    <div class="row" id="price-per-share">
 
-                <div class="clearfix"></div>
-
-                <div class="row" id="price-per-share">
-                    <div class="col-md-8">
-                        <label>Price per share: </label>
                     </div>
-                    <div class="col-md-4">
-                        <label>$35.6 </label>
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+                        <button class="btn btn-primary" id="pay-now">Pay Now</button>
                     </div>
-                </div>
-
-                <!--Footer-->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-                    <button class="btn btn-primary" id="pay-now" data-toggle="modal" data-target="#payment-modal-form">Pay Now</button>
-                </div>
+                </form>
             </div>
         </div>
     </div>

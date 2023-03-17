@@ -86,7 +86,7 @@
                     </a>
                 </li>
                 <li class="nav-item d-none d-lg-block">
-                    <a href="https://www.creative-tim.com/product/argon-design-system-pro?ref=ads-upgrade-pro" target="_blank" class="btn btn-primary btn-icon">
+                    <a  href="/profile.jsp" class="btn btn-primary btn-icon">
                         <span class="btn-inner--icon">
                             <i class="fa fa-shopping-cart"></i>
                         </span>

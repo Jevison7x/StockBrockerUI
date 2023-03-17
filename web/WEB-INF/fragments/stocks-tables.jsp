@@ -33,7 +33,7 @@
                 <td>${companyStock.currencyName}</td>
                 <td>${companyStock.currency}</td>
                 <td>
-                    <button type="button" id="buy" class="btn btn-sm btn-success" data-toggle="modal" data-target="#buy-stocks-modal">
+                    <button type="button" id="buy" class="btn btn-sm btn-success" data-order-id="${companyStock.symbol}">
                         Buy Now
                     </button>
                 </td>

@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+ <jsp:useBean id="companyStock" class="com.bizblock.library.company.CompanyStock"/>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,36 +26,16 @@
                                         <h5 >User Details:</h5>
                                     </div>
                                     <div class="form-group mb-3">
-                                        <div class="input-group input-group-alternative">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
-                                            </div>
-                                            <input class="form-control" placeholder="First Name"  disabled=""/>
-                                        </div>
+                                        <label>First Name:<span id="firstname"></span></label>
                                     </div>
                                     <div class="form-group mb-3">
-                                        <div class="input-group input-group-alternative">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
-                                            </div>
-                                            <input class="form-control" placeholder="Last Name"  disabled=""/>
-                                        </div>
+                                        <label>Last Name:<span id="lastname"></span></label>
                                     </div>
                                     <div class="form-group mb-3">
-                                        <div class="input-group input-group-alternative">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
-                                            </div>
-                                            <input class="form-control" placeholder="User Name"  disabled=""/>
-                                        </div>
+                                        <label>Username:<span id="username"></span></label>
                                     </div>
                                     <div class="form-group mb-3">
-                                        <div class="input-group input-group-alternative">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                                            </div>
-                                            <input class="form-control" placeholder="Email"  disabled=""/>
-                                        </div>
+                                        <label >Email:<span id="email"></span></label>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +59,7 @@
                                 <td>AMA</td>
                                 <td>23000</td>
                                 <td class="td-actions text-right">
-                                    <button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#sell-stocks-modal">
+                                    <button type="button" class="btn btn-sm btn-warning" id="sell-modal" data-order-id="${companyStock.symbol}">
                                         Sell Now
                                     </button>
                                 </td>
@@ -113,6 +94,7 @@
                                     </div>
                                     <div class="col-md-5">
                                         <input type="number" class="form-control share-selector"/>
+                                        <input hidden="" id="companySymbol"/>
                                     </div>
                                 </div>
                             </div>
@@ -132,6 +114,7 @@
         </div>
         <!--   Core JS Files   -->
         <jsp:include page="WEB-INF/fragments/scripts.jsp"/>
+        <jsp:include page="js/profile.js"/>
         <jsp:include page="WEB-INF/fragments/buy-modal.jsp"/>
     </body>
 </html>
