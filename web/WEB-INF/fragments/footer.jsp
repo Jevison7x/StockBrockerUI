@@ -1,7 +1,7 @@
 <%--
     Document   : footer
     Created on : Mar 11, 2023, 11:29:22 PM
-    Author     : jevis
+    Author     : Praise
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

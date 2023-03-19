@@ -1,7 +1,7 @@
 <%--
     Document   : head-codes
     Created on : Mar 11, 2023, 11:22:09 PM
-    Author     : jevis
+    Author     : Praise
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -22,9 +22,10 @@
         <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
         <!-- CSS Files -->
         <link href="./assets/css/argon-design-system.css?v=1.2.2" rel="stylesheet" />
-        <!-- Custom CSS Files -->
-        <link href="./css/kufre.css" rel="stylesheet"/>
+        <link href="./css/all.min.css" rel="stylesheet"/>
          <!-- Data tables CSS Files -->
         <link href="./css/jquery.dataTables.min.css" rel="stylesheet" />
         <!-- Sweet Alert -->
-        <link href="./css/sweetalert2.min.css" rel="stylesheet" >
+        <link href="./css/sweetalert2.min.css" rel="stylesheet"/>
+        <!-- Custom CSS Files -->
+        <link href="./css/kufre.css" rel="stylesheet"/>

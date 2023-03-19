@@ -1,7 +1,7 @@
 <%--
     Document   : stocks-tables
     Created on : Mar 12, 2023, 9:02:00 AM
-    Author     : KUFRE
+    Author     : Praise
 --%>
 
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
@@ -38,7 +38,7 @@
                             data-order-currency="${companyStock.currencyName}"
                             data-order-share-price="${companyStock.sharePrice}"
                             data-order-company-name="${companyStock.name}">
-                        Buy Now
+                        <i class="fas fa-arrow-circle-down"></i> Buy Now
                     </button>
                 </td>
             </tr>

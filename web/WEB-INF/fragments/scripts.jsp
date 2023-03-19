@@ -1,7 +1,7 @@
 <%--
     Document   : scripts
     Created on : Mar 11, 2023, 11:34:09 PM
-    Author     : jevis
+    Author     : Praise
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -40,3 +40,5 @@
         </script>
         <script src="./js/jquery.dataTables.min.js"></script>
         <script src="./js/sweetalert2.js"></script>
+        <script src="./js/app.js"></script>
+        <script src="./js/all.min.js"></script>

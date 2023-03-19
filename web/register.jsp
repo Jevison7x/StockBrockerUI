@@ -1,7 +1,7 @@
 <%--
     Document   : register
     Created on : Mar 12, 2023, 6:14:27 PM
-    Author     : KUFRE
+    Author     : Praise
 --%>
 
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
